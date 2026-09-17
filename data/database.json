@@ -1,0 +1,9 @@
+{
+  "orders": {
+    "1001": {"user_id": "u001", "item": "iPhone", "price": 5999, "status": "pending"},
+    "1002": {"user_id": "u002", "item": "耳机", "price": 899, "status": "processing"},
+    "1003": {"user_id": "u003", "item": "相机", "price": 4299, "status": "shipped"},
+    "1004": {"user_id": "u004", "item": "键盘", "price": 499, "status": "cancelled"}
+  }
+}
+

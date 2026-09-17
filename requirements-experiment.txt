@@ -1,0 +1,8 @@
+# Tested on Windows / Python 3.11 / torch 2.5.1+cu121 / RTX 3060 6GB.
+# Install a compatible CUDA torch wheel first (see 完整流程与运行说明.md).
+transformers==5.6.1
+peft==0.20.0
+accelerate==1.13.0
+scikit-learn>=1.4,<2
+numpy>=1.26,<3
+pytest>=8,<10

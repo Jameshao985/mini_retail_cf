@@ -1,0 +1,4 @@
+# Optional next-stage dependencies. Keep the offline MVP install small.
+openai>=1.0
+peft>=0.15
+accelerate>=0.30

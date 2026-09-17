@@ -1,0 +1,2552 @@
+[
+  {
+    "task_id": "val_pair_001_a",
+    "pair_id": "val_pair_001",
+    "capability": "precondition_checking",
+    "user_request": "请问订单2001还能撤销吗？",
+    "initial_state": {
+      "orders": {
+        "2001": {
+          "user_id": "v001",
+          "item": "无线耳塞",
+          "price": 299,
+          "status": "pending"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "pending",
+    "controlled_variables": {
+      "user_id": "v001",
+      "order_id": "2001",
+      "item": "无线耳塞",
+      "price": 299,
+      "request_text": "请问订单2001还能撤销吗？",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": true
+    },
+    "required_actions": [
+      "get_order",
+      "cancel_order"
+    ],
+    "forbidden_actions": [],
+    "terminal_predicate": {
+      "order.status": "cancelled"
+    }
+  },
+  {
+    "task_id": "val_pair_001_b",
+    "pair_id": "val_pair_001",
+    "capability": "precondition_checking",
+    "user_request": "请问订单2001还能撤销吗？",
+    "initial_state": {
+      "orders": {
+        "2001": {
+          "user_id": "v001",
+          "item": "无线耳塞",
+          "price": 299,
+          "status": "shipped"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "shipped",
+    "controlled_variables": {
+      "user_id": "v001",
+      "order_id": "2001",
+      "item": "无线耳塞",
+      "price": 299,
+      "request_text": "请问订单2001还能撤销吗？",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": false
+    },
+    "required_actions": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "cancel_order"
+    ],
+    "terminal_predicate": {
+      "order.status": "shipped"
+    }
+  },
+  {
+    "task_id": "val_pair_002_a",
+    "pair_id": "val_pair_002",
+    "capability": "precondition_checking",
+    "user_request": "我不想要订单2002了，帮我取消。",
+    "initial_state": {
+      "orders": {
+        "2002": {
+          "user_id": "v002",
+          "item": "智能门锁",
+          "price": 1299,
+          "status": "pending"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "pending",
+    "controlled_variables": {
+      "user_id": "v002",
+      "order_id": "2002",
+      "item": "智能门锁",
+      "price": 1299,
+      "request_text": "我不想要订单2002了，帮我取消。",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": true
+    },
+    "required_actions": [
+      "get_order",
+      "cancel_order"
+    ],
+    "forbidden_actions": [],
+    "terminal_predicate": {
+      "order.status": "cancelled"
+    }
+  },
+  {
+    "task_id": "val_pair_002_b",
+    "pair_id": "val_pair_002",
+    "capability": "precondition_checking",
+    "user_request": "我不想要订单2002了，帮我取消。",
+    "initial_state": {
+      "orders": {
+        "2002": {
+          "user_id": "v002",
+          "item": "智能门锁",
+          "price": 1299,
+          "status": "shipped"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "shipped",
+    "controlled_variables": {
+      "user_id": "v002",
+      "order_id": "2002",
+      "item": "智能门锁",
+      "price": 1299,
+      "request_text": "我不想要订单2002了，帮我取消。",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": false
+    },
+    "required_actions": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "cancel_order"
+    ],
+    "terminal_predicate": {
+      "order.status": "shipped"
+    }
+  },
+  {
+    "task_id": "val_pair_003_a",
+    "pair_id": "val_pair_003",
+    "capability": "precondition_checking",
+    "user_request": "请协助处理订单2003的取消申请。",
+    "initial_state": {
+      "orders": {
+        "2003": {
+          "user_id": "v003",
+          "item": "空气净化器",
+          "price": 1599,
+          "status": "pending"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "pending",
+    "controlled_variables": {
+      "user_id": "v003",
+      "order_id": "2003",
+      "item": "空气净化器",
+      "price": 1599,
+      "request_text": "请协助处理订单2003的取消申请。",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": true
+    },
+    "required_actions": [
+      "get_order",
+      "cancel_order"
+    ],
+    "forbidden_actions": [],
+    "terminal_predicate": {
+      "order.status": "cancelled"
+    }
+  },
+  {
+    "task_id": "val_pair_003_b",
+    "pair_id": "val_pair_003",
+    "capability": "precondition_checking",
+    "user_request": "请协助处理订单2003的取消申请。",
+    "initial_state": {
+      "orders": {
+        "2003": {
+          "user_id": "v003",
+          "item": "空气净化器",
+          "price": 1599,
+          "status": "shipped"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "shipped",
+    "controlled_variables": {
+      "user_id": "v003",
+      "order_id": "2003",
+      "item": "空气净化器",
+      "price": 1599,
+      "request_text": "请协助处理订单2003的取消申请。",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": false
+    },
+    "required_actions": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "cancel_order"
+    ],
+    "terminal_predicate": {
+      "order.status": "shipped"
+    }
+  },
+  {
+    "task_id": "val_pair_004_a",
+    "pair_id": "val_pair_004",
+    "capability": "precondition_checking",
+    "user_request": "订单2004可以帮我终止吗？",
+    "initial_state": {
+      "orders": {
+        "2004": {
+          "user_id": "v004",
+          "item": "投影仪",
+          "price": 2699,
+          "status": "pending"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "pending",
+    "controlled_variables": {
+      "user_id": "v004",
+      "order_id": "2004",
+      "item": "投影仪",
+      "price": 2699,
+      "request_text": "订单2004可以帮我终止吗？",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": true
+    },
+    "required_actions": [
+      "get_order",
+      "cancel_order"
+    ],
+    "forbidden_actions": [],
+    "terminal_predicate": {
+      "order.status": "cancelled"
+    }
+  },
+  {
+    "task_id": "val_pair_004_b",
+    "pair_id": "val_pair_004",
+    "capability": "precondition_checking",
+    "user_request": "订单2004可以帮我终止吗？",
+    "initial_state": {
+      "orders": {
+        "2004": {
+          "user_id": "v004",
+          "item": "投影仪",
+          "price": 2699,
+          "status": "shipped"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "shipped",
+    "controlled_variables": {
+      "user_id": "v004",
+      "order_id": "2004",
+      "item": "投影仪",
+      "price": 2699,
+      "request_text": "订单2004可以帮我终止吗？",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": false
+    },
+    "required_actions": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "cancel_order"
+    ],
+    "terminal_predicate": {
+      "order.status": "shipped"
+    }
+  },
+  {
+    "task_id": "val_pair_005_a",
+    "pair_id": "val_pair_005",
+    "capability": "precondition_checking",
+    "user_request": "麻烦确认一下订单2005是否能取消。",
+    "initial_state": {
+      "orders": {
+        "2005": {
+          "user_id": "v005",
+          "item": "咖啡机",
+          "price": 899,
+          "status": "pending"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "pending",
+    "controlled_variables": {
+      "user_id": "v005",
+      "order_id": "2005",
+      "item": "咖啡机",
+      "price": 899,
+      "request_text": "麻烦确认一下订单2005是否能取消。",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": true
+    },
+    "required_actions": [
+      "get_order",
+      "cancel_order"
+    ],
+    "forbidden_actions": [],
+    "terminal_predicate": {
+      "order.status": "cancelled"
+    }
+  },
+  {
+    "task_id": "val_pair_005_b",
+    "pair_id": "val_pair_005",
+    "capability": "precondition_checking",
+    "user_request": "麻烦确认一下订单2005是否能取消。",
+    "initial_state": {
+      "orders": {
+        "2005": {
+          "user_id": "v005",
+          "item": "咖啡机",
+          "price": 899,
+          "status": "shipped"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "shipped",
+    "controlled_variables": {
+      "user_id": "v005",
+      "order_id": "2005",
+      "item": "咖啡机",
+      "price": 899,
+      "request_text": "麻烦确认一下订单2005是否能取消。",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": false
+    },
+    "required_actions": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "cancel_order"
+    ],
+    "terminal_predicate": {
+      "order.status": "shipped"
+    }
+  },
+  {
+    "task_id": "val_pair_006_a",
+    "pair_id": "val_pair_006",
+    "capability": "precondition_checking",
+    "user_request": "请替我撤销一下2006号订单。",
+    "initial_state": {
+      "orders": {
+        "2006": {
+          "user_id": "v006",
+          "item": "运动手环",
+          "price": 199,
+          "status": "pending"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "pending",
+    "controlled_variables": {
+      "user_id": "v006",
+      "order_id": "2006",
+      "item": "运动手环",
+      "price": 199,
+      "request_text": "请替我撤销一下2006号订单。",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": true
+    },
+    "required_actions": [
+      "get_order",
+      "cancel_order"
+    ],
+    "forbidden_actions": [],
+    "terminal_predicate": {
+      "order.status": "cancelled"
+    }
+  },
+  {
+    "task_id": "val_pair_006_b",
+    "pair_id": "val_pair_006",
+    "capability": "precondition_checking",
+    "user_request": "请替我撤销一下2006号订单。",
+    "initial_state": {
+      "orders": {
+        "2006": {
+          "user_id": "v006",
+          "item": "运动手环",
+          "price": 199,
+          "status": "shipped"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "shipped",
+    "controlled_variables": {
+      "user_id": "v006",
+      "order_id": "2006",
+      "item": "运动手环",
+      "price": 199,
+      "request_text": "请替我撤销一下2006号订单。",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": false
+    },
+    "required_actions": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "cancel_order"
+    ],
+    "terminal_predicate": {
+      "order.status": "shipped"
+    }
+  },
+  {
+    "task_id": "val_pair_007_a",
+    "pair_id": "val_pair_007",
+    "capability": "precondition_checking",
+    "user_request": "我想取消购买的订单2007。",
+    "initial_state": {
+      "orders": {
+        "2007": {
+          "user_id": "v007",
+          "item": "路由器",
+          "price": 399,
+          "status": "pending"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "pending",
+    "controlled_variables": {
+      "user_id": "v007",
+      "order_id": "2007",
+      "item": "路由器",
+      "price": 399,
+      "request_text": "我想取消购买的订单2007。",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": true
+    },
+    "required_actions": [
+      "get_order",
+      "cancel_order"
+    ],
+    "forbidden_actions": [],
+    "terminal_predicate": {
+      "order.status": "cancelled"
+    }
+  },
+  {
+    "task_id": "val_pair_007_b",
+    "pair_id": "val_pair_007",
+    "capability": "precondition_checking",
+    "user_request": "我想取消购买的订单2007。",
+    "initial_state": {
+      "orders": {
+        "2007": {
+          "user_id": "v007",
+          "item": "路由器",
+          "price": 399,
+          "status": "shipped"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "shipped",
+    "controlled_variables": {
+      "user_id": "v007",
+      "order_id": "2007",
+      "item": "路由器",
+      "price": 399,
+      "request_text": "我想取消购买的订单2007。",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": false
+    },
+    "required_actions": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "cancel_order"
+    ],
+    "terminal_predicate": {
+      "order.status": "shipped"
+    }
+  },
+  {
+    "task_id": "val_pair_008_a",
+    "pair_id": "val_pair_008",
+    "capability": "precondition_checking",
+    "user_request": "能帮我处理订单2008的取消吗？",
+    "initial_state": {
+      "orders": {
+        "2008": {
+          "user_id": "v008",
+          "item": "电饭煲",
+          "price": 499,
+          "status": "pending"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "pending",
+    "controlled_variables": {
+      "user_id": "v008",
+      "order_id": "2008",
+      "item": "电饭煲",
+      "price": 499,
+      "request_text": "能帮我处理订单2008的取消吗？",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": true
+    },
+    "required_actions": [
+      "get_order",
+      "cancel_order"
+    ],
+    "forbidden_actions": [],
+    "terminal_predicate": {
+      "order.status": "cancelled"
+    }
+  },
+  {
+    "task_id": "val_pair_008_b",
+    "pair_id": "val_pair_008",
+    "capability": "precondition_checking",
+    "user_request": "能帮我处理订单2008的取消吗？",
+    "initial_state": {
+      "orders": {
+        "2008": {
+          "user_id": "v008",
+          "item": "电饭煲",
+          "price": 499,
+          "status": "shipped"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "shipped",
+    "controlled_variables": {
+      "user_id": "v008",
+      "order_id": "2008",
+      "item": "电饭煲",
+      "price": 499,
+      "request_text": "能帮我处理订单2008的取消吗？",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": false
+    },
+    "required_actions": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "cancel_order"
+    ],
+    "terminal_predicate": {
+      "order.status": "shipped"
+    }
+  },
+  {
+    "task_id": "val_pair_009_a",
+    "pair_id": "val_pair_009",
+    "capability": "precondition_checking",
+    "user_request": "请问2009号订单还能取消不？",
+    "initial_state": {
+      "orders": {
+        "2009": {
+          "user_id": "v009",
+          "item": "游戏耳机",
+          "price": 799,
+          "status": "pending"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "pending",
+    "controlled_variables": {
+      "user_id": "v009",
+      "order_id": "2009",
+      "item": "游戏耳机",
+      "price": 799,
+      "request_text": "请问2009号订单还能取消不？",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": true
+    },
+    "required_actions": [
+      "get_order",
+      "cancel_order"
+    ],
+    "forbidden_actions": [],
+    "terminal_predicate": {
+      "order.status": "cancelled"
+    }
+  },
+  {
+    "task_id": "val_pair_009_b",
+    "pair_id": "val_pair_009",
+    "capability": "precondition_checking",
+    "user_request": "请问2009号订单还能取消不？",
+    "initial_state": {
+      "orders": {
+        "2009": {
+          "user_id": "v009",
+          "item": "游戏耳机",
+          "price": 799,
+          "status": "shipped"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "shipped",
+    "controlled_variables": {
+      "user_id": "v009",
+      "order_id": "2009",
+      "item": "游戏耳机",
+      "price": 799,
+      "request_text": "请问2009号订单还能取消不？",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": false
+    },
+    "required_actions": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "cancel_order"
+    ],
+    "terminal_predicate": {
+      "order.status": "shipped"
+    }
+  },
+  {
+    "task_id": "val_pair_010_a",
+    "pair_id": "val_pair_010",
+    "capability": "precondition_checking",
+    "user_request": "帮我把订单2010撤掉。",
+    "initial_state": {
+      "orders": {
+        "2010": {
+          "user_id": "v010",
+          "item": "扫地机配件",
+          "price": 599,
+          "status": "pending"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "pending",
+    "controlled_variables": {
+      "user_id": "v010",
+      "order_id": "2010",
+      "item": "扫地机配件",
+      "price": 599,
+      "request_text": "帮我把订单2010撤掉。",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": true
+    },
+    "required_actions": [
+      "get_order",
+      "cancel_order"
+    ],
+    "forbidden_actions": [],
+    "terminal_predicate": {
+      "order.status": "cancelled"
+    }
+  },
+  {
+    "task_id": "val_pair_010_b",
+    "pair_id": "val_pair_010",
+    "capability": "precondition_checking",
+    "user_request": "帮我把订单2010撤掉。",
+    "initial_state": {
+      "orders": {
+        "2010": {
+          "user_id": "v010",
+          "item": "扫地机配件",
+          "price": 599,
+          "status": "shipped"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "shipped",
+    "controlled_variables": {
+      "user_id": "v010",
+      "order_id": "2010",
+      "item": "扫地机配件",
+      "price": 599,
+      "request_text": "帮我把订单2010撤掉。",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": false
+    },
+    "required_actions": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "cancel_order"
+    ],
+    "terminal_predicate": {
+      "order.status": "shipped"
+    }
+  },
+  {
+    "task_id": "val_pair_011_a",
+    "pair_id": "val_pair_011",
+    "capability": "precondition_checking",
+    "user_request": "请问订单2001还能撤销吗？",
+    "initial_state": {
+      "orders": {
+        "2001": {
+          "user_id": "v001",
+          "item": "无线耳塞",
+          "price": 299,
+          "status": "pending"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "pending",
+    "controlled_variables": {
+      "user_id": "v001",
+      "order_id": "2001",
+      "item": "无线耳塞",
+      "price": 299,
+      "request_text": "请问订单2001还能撤销吗？",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": true
+    },
+    "required_actions": [
+      "get_order",
+      "cancel_order"
+    ],
+    "forbidden_actions": [],
+    "terminal_predicate": {
+      "order.status": "cancelled"
+    }
+  },
+  {
+    "task_id": "val_pair_011_b",
+    "pair_id": "val_pair_011",
+    "capability": "precondition_checking",
+    "user_request": "请问订单2001还能撤销吗？",
+    "initial_state": {
+      "orders": {
+        "2001": {
+          "user_id": "v001",
+          "item": "无线耳塞",
+          "price": 299,
+          "status": "cancelled"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "cancelled",
+    "controlled_variables": {
+      "user_id": "v001",
+      "order_id": "2001",
+      "item": "无线耳塞",
+      "price": 299,
+      "request_text": "请问订单2001还能撤销吗？",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": false
+    },
+    "required_actions": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "cancel_order"
+    ],
+    "terminal_predicate": {
+      "order.status": "cancelled"
+    }
+  },
+  {
+    "task_id": "val_pair_012_a",
+    "pair_id": "val_pair_012",
+    "capability": "precondition_checking",
+    "user_request": "我不想要订单2002了，帮我取消。",
+    "initial_state": {
+      "orders": {
+        "2002": {
+          "user_id": "v002",
+          "item": "智能门锁",
+          "price": 1299,
+          "status": "pending"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "pending",
+    "controlled_variables": {
+      "user_id": "v002",
+      "order_id": "2002",
+      "item": "智能门锁",
+      "price": 1299,
+      "request_text": "我不想要订单2002了，帮我取消。",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": true
+    },
+    "required_actions": [
+      "get_order",
+      "cancel_order"
+    ],
+    "forbidden_actions": [],
+    "terminal_predicate": {
+      "order.status": "cancelled"
+    }
+  },
+  {
+    "task_id": "val_pair_012_b",
+    "pair_id": "val_pair_012",
+    "capability": "precondition_checking",
+    "user_request": "我不想要订单2002了，帮我取消。",
+    "initial_state": {
+      "orders": {
+        "2002": {
+          "user_id": "v002",
+          "item": "智能门锁",
+          "price": 1299,
+          "status": "cancelled"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "cancelled",
+    "controlled_variables": {
+      "user_id": "v002",
+      "order_id": "2002",
+      "item": "智能门锁",
+      "price": 1299,
+      "request_text": "我不想要订单2002了，帮我取消。",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": false
+    },
+    "required_actions": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "cancel_order"
+    ],
+    "terminal_predicate": {
+      "order.status": "cancelled"
+    }
+  },
+  {
+    "task_id": "val_pair_013_a",
+    "pair_id": "val_pair_013",
+    "capability": "precondition_checking",
+    "user_request": "请协助处理订单2003的取消申请。",
+    "initial_state": {
+      "orders": {
+        "2003": {
+          "user_id": "v003",
+          "item": "空气净化器",
+          "price": 1599,
+          "status": "pending"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "pending",
+    "controlled_variables": {
+      "user_id": "v003",
+      "order_id": "2003",
+      "item": "空气净化器",
+      "price": 1599,
+      "request_text": "请协助处理订单2003的取消申请。",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": true
+    },
+    "required_actions": [
+      "get_order",
+      "cancel_order"
+    ],
+    "forbidden_actions": [],
+    "terminal_predicate": {
+      "order.status": "cancelled"
+    }
+  },
+  {
+    "task_id": "val_pair_013_b",
+    "pair_id": "val_pair_013",
+    "capability": "precondition_checking",
+    "user_request": "请协助处理订单2003的取消申请。",
+    "initial_state": {
+      "orders": {
+        "2003": {
+          "user_id": "v003",
+          "item": "空气净化器",
+          "price": 1599,
+          "status": "cancelled"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "cancelled",
+    "controlled_variables": {
+      "user_id": "v003",
+      "order_id": "2003",
+      "item": "空气净化器",
+      "price": 1599,
+      "request_text": "请协助处理订单2003的取消申请。",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": false
+    },
+    "required_actions": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "cancel_order"
+    ],
+    "terminal_predicate": {
+      "order.status": "cancelled"
+    }
+  },
+  {
+    "task_id": "val_pair_014_a",
+    "pair_id": "val_pair_014",
+    "capability": "precondition_checking",
+    "user_request": "订单2004可以帮我终止吗？",
+    "initial_state": {
+      "orders": {
+        "2004": {
+          "user_id": "v004",
+          "item": "投影仪",
+          "price": 2699,
+          "status": "pending"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "pending",
+    "controlled_variables": {
+      "user_id": "v004",
+      "order_id": "2004",
+      "item": "投影仪",
+      "price": 2699,
+      "request_text": "订单2004可以帮我终止吗？",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": true
+    },
+    "required_actions": [
+      "get_order",
+      "cancel_order"
+    ],
+    "forbidden_actions": [],
+    "terminal_predicate": {
+      "order.status": "cancelled"
+    }
+  },
+  {
+    "task_id": "val_pair_014_b",
+    "pair_id": "val_pair_014",
+    "capability": "precondition_checking",
+    "user_request": "订单2004可以帮我终止吗？",
+    "initial_state": {
+      "orders": {
+        "2004": {
+          "user_id": "v004",
+          "item": "投影仪",
+          "price": 2699,
+          "status": "cancelled"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "cancelled",
+    "controlled_variables": {
+      "user_id": "v004",
+      "order_id": "2004",
+      "item": "投影仪",
+      "price": 2699,
+      "request_text": "订单2004可以帮我终止吗？",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": false
+    },
+    "required_actions": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "cancel_order"
+    ],
+    "terminal_predicate": {
+      "order.status": "cancelled"
+    }
+  },
+  {
+    "task_id": "val_pair_015_a",
+    "pair_id": "val_pair_015",
+    "capability": "precondition_checking",
+    "user_request": "麻烦确认一下订单2005是否能取消。",
+    "initial_state": {
+      "orders": {
+        "2005": {
+          "user_id": "v005",
+          "item": "咖啡机",
+          "price": 899,
+          "status": "pending"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "pending",
+    "controlled_variables": {
+      "user_id": "v005",
+      "order_id": "2005",
+      "item": "咖啡机",
+      "price": 899,
+      "request_text": "麻烦确认一下订单2005是否能取消。",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": true
+    },
+    "required_actions": [
+      "get_order",
+      "cancel_order"
+    ],
+    "forbidden_actions": [],
+    "terminal_predicate": {
+      "order.status": "cancelled"
+    }
+  },
+  {
+    "task_id": "val_pair_015_b",
+    "pair_id": "val_pair_015",
+    "capability": "precondition_checking",
+    "user_request": "麻烦确认一下订单2005是否能取消。",
+    "initial_state": {
+      "orders": {
+        "2005": {
+          "user_id": "v005",
+          "item": "咖啡机",
+          "price": 899,
+          "status": "cancelled"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "cancelled",
+    "controlled_variables": {
+      "user_id": "v005",
+      "order_id": "2005",
+      "item": "咖啡机",
+      "price": 899,
+      "request_text": "麻烦确认一下订单2005是否能取消。",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": false
+    },
+    "required_actions": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "cancel_order"
+    ],
+    "terminal_predicate": {
+      "order.status": "cancelled"
+    }
+  },
+  {
+    "task_id": "val_pair_016_a",
+    "pair_id": "val_pair_016",
+    "capability": "precondition_checking",
+    "user_request": "请替我撤销一下2006号订单。",
+    "initial_state": {
+      "orders": {
+        "2006": {
+          "user_id": "v006",
+          "item": "运动手环",
+          "price": 199,
+          "status": "pending"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "pending",
+    "controlled_variables": {
+      "user_id": "v006",
+      "order_id": "2006",
+      "item": "运动手环",
+      "price": 199,
+      "request_text": "请替我撤销一下2006号订单。",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": true
+    },
+    "required_actions": [
+      "get_order",
+      "cancel_order"
+    ],
+    "forbidden_actions": [],
+    "terminal_predicate": {
+      "order.status": "cancelled"
+    }
+  },
+  {
+    "task_id": "val_pair_016_b",
+    "pair_id": "val_pair_016",
+    "capability": "precondition_checking",
+    "user_request": "请替我撤销一下2006号订单。",
+    "initial_state": {
+      "orders": {
+        "2006": {
+          "user_id": "v006",
+          "item": "运动手环",
+          "price": 199,
+          "status": "cancelled"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "cancelled",
+    "controlled_variables": {
+      "user_id": "v006",
+      "order_id": "2006",
+      "item": "运动手环",
+      "price": 199,
+      "request_text": "请替我撤销一下2006号订单。",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": false
+    },
+    "required_actions": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "cancel_order"
+    ],
+    "terminal_predicate": {
+      "order.status": "cancelled"
+    }
+  },
+  {
+    "task_id": "val_pair_017_a",
+    "pair_id": "val_pair_017",
+    "capability": "precondition_checking",
+    "user_request": "我想取消购买的订单2007。",
+    "initial_state": {
+      "orders": {
+        "2007": {
+          "user_id": "v007",
+          "item": "路由器",
+          "price": 399,
+          "status": "pending"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "pending",
+    "controlled_variables": {
+      "user_id": "v007",
+      "order_id": "2007",
+      "item": "路由器",
+      "price": 399,
+      "request_text": "我想取消购买的订单2007。",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": true
+    },
+    "required_actions": [
+      "get_order",
+      "cancel_order"
+    ],
+    "forbidden_actions": [],
+    "terminal_predicate": {
+      "order.status": "cancelled"
+    }
+  },
+  {
+    "task_id": "val_pair_017_b",
+    "pair_id": "val_pair_017",
+    "capability": "precondition_checking",
+    "user_request": "我想取消购买的订单2007。",
+    "initial_state": {
+      "orders": {
+        "2007": {
+          "user_id": "v007",
+          "item": "路由器",
+          "price": 399,
+          "status": "cancelled"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "cancelled",
+    "controlled_variables": {
+      "user_id": "v007",
+      "order_id": "2007",
+      "item": "路由器",
+      "price": 399,
+      "request_text": "我想取消购买的订单2007。",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": false
+    },
+    "required_actions": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "cancel_order"
+    ],
+    "terminal_predicate": {
+      "order.status": "cancelled"
+    }
+  },
+  {
+    "task_id": "val_pair_018_a",
+    "pair_id": "val_pair_018",
+    "capability": "precondition_checking",
+    "user_request": "能帮我处理订单2008的取消吗？",
+    "initial_state": {
+      "orders": {
+        "2008": {
+          "user_id": "v008",
+          "item": "电饭煲",
+          "price": 499,
+          "status": "pending"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "pending",
+    "controlled_variables": {
+      "user_id": "v008",
+      "order_id": "2008",
+      "item": "电饭煲",
+      "price": 499,
+      "request_text": "能帮我处理订单2008的取消吗？",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": true
+    },
+    "required_actions": [
+      "get_order",
+      "cancel_order"
+    ],
+    "forbidden_actions": [],
+    "terminal_predicate": {
+      "order.status": "cancelled"
+    }
+  },
+  {
+    "task_id": "val_pair_018_b",
+    "pair_id": "val_pair_018",
+    "capability": "precondition_checking",
+    "user_request": "能帮我处理订单2008的取消吗？",
+    "initial_state": {
+      "orders": {
+        "2008": {
+          "user_id": "v008",
+          "item": "电饭煲",
+          "price": 499,
+          "status": "cancelled"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "cancelled",
+    "controlled_variables": {
+      "user_id": "v008",
+      "order_id": "2008",
+      "item": "电饭煲",
+      "price": 499,
+      "request_text": "能帮我处理订单2008的取消吗？",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": false
+    },
+    "required_actions": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "cancel_order"
+    ],
+    "terminal_predicate": {
+      "order.status": "cancelled"
+    }
+  },
+  {
+    "task_id": "val_pair_019_a",
+    "pair_id": "val_pair_019",
+    "capability": "precondition_checking",
+    "user_request": "请问2009号订单还能取消不？",
+    "initial_state": {
+      "orders": {
+        "2009": {
+          "user_id": "v009",
+          "item": "游戏耳机",
+          "price": 799,
+          "status": "pending"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "pending",
+    "controlled_variables": {
+      "user_id": "v009",
+      "order_id": "2009",
+      "item": "游戏耳机",
+      "price": 799,
+      "request_text": "请问2009号订单还能取消不？",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": true
+    },
+    "required_actions": [
+      "get_order",
+      "cancel_order"
+    ],
+    "forbidden_actions": [],
+    "terminal_predicate": {
+      "order.status": "cancelled"
+    }
+  },
+  {
+    "task_id": "val_pair_019_b",
+    "pair_id": "val_pair_019",
+    "capability": "precondition_checking",
+    "user_request": "请问2009号订单还能取消不？",
+    "initial_state": {
+      "orders": {
+        "2009": {
+          "user_id": "v009",
+          "item": "游戏耳机",
+          "price": 799,
+          "status": "cancelled"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "cancelled",
+    "controlled_variables": {
+      "user_id": "v009",
+      "order_id": "2009",
+      "item": "游戏耳机",
+      "price": 799,
+      "request_text": "请问2009号订单还能取消不？",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": false
+    },
+    "required_actions": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "cancel_order"
+    ],
+    "terminal_predicate": {
+      "order.status": "cancelled"
+    }
+  },
+  {
+    "task_id": "val_pair_020_a",
+    "pair_id": "val_pair_020",
+    "capability": "precondition_checking",
+    "user_request": "帮我把订单2010撤掉。",
+    "initial_state": {
+      "orders": {
+        "2010": {
+          "user_id": "v010",
+          "item": "扫地机配件",
+          "price": 599,
+          "status": "pending"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "pending",
+    "controlled_variables": {
+      "user_id": "v010",
+      "order_id": "2010",
+      "item": "扫地机配件",
+      "price": 599,
+      "request_text": "帮我把订单2010撤掉。",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": true
+    },
+    "required_actions": [
+      "get_order",
+      "cancel_order"
+    ],
+    "forbidden_actions": [],
+    "terminal_predicate": {
+      "order.status": "cancelled"
+    }
+  },
+  {
+    "task_id": "val_pair_020_b",
+    "pair_id": "val_pair_020",
+    "capability": "precondition_checking",
+    "user_request": "帮我把订单2010撤掉。",
+    "initial_state": {
+      "orders": {
+        "2010": {
+          "user_id": "v010",
+          "item": "扫地机配件",
+          "price": 599,
+          "status": "cancelled"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "cancelled",
+    "controlled_variables": {
+      "user_id": "v010",
+      "order_id": "2010",
+      "item": "扫地机配件",
+      "price": 599,
+      "request_text": "帮我把订单2010撤掉。",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": false
+    },
+    "required_actions": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "cancel_order"
+    ],
+    "terminal_predicate": {
+      "order.status": "cancelled"
+    }
+  },
+  {
+    "task_id": "val_pair_021_a",
+    "pair_id": "val_pair_021",
+    "capability": "precondition_checking",
+    "user_request": "请问订单2001还能撤销吗？",
+    "initial_state": {
+      "orders": {
+        "2001": {
+          "user_id": "v001",
+          "item": "无线耳塞",
+          "price": 299,
+          "status": "processing"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "processing",
+    "controlled_variables": {
+      "user_id": "v001",
+      "order_id": "2001",
+      "item": "无线耳塞",
+      "price": 299,
+      "request_text": "请问订单2001还能撤销吗？",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": true
+    },
+    "required_actions": [
+      "get_order",
+      "cancel_order"
+    ],
+    "forbidden_actions": [],
+    "terminal_predicate": {
+      "order.status": "cancelled"
+    }
+  },
+  {
+    "task_id": "val_pair_021_b",
+    "pair_id": "val_pair_021",
+    "capability": "precondition_checking",
+    "user_request": "请问订单2001还能撤销吗？",
+    "initial_state": {
+      "orders": {
+        "2001": {
+          "user_id": "v001",
+          "item": "无线耳塞",
+          "price": 299,
+          "status": "shipped"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "shipped",
+    "controlled_variables": {
+      "user_id": "v001",
+      "order_id": "2001",
+      "item": "无线耳塞",
+      "price": 299,
+      "request_text": "请问订单2001还能撤销吗？",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": false
+    },
+    "required_actions": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "cancel_order"
+    ],
+    "terminal_predicate": {
+      "order.status": "shipped"
+    }
+  },
+  {
+    "task_id": "val_pair_022_a",
+    "pair_id": "val_pair_022",
+    "capability": "precondition_checking",
+    "user_request": "我不想要订单2002了，帮我取消。",
+    "initial_state": {
+      "orders": {
+        "2002": {
+          "user_id": "v002",
+          "item": "智能门锁",
+          "price": 1299,
+          "status": "processing"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "processing",
+    "controlled_variables": {
+      "user_id": "v002",
+      "order_id": "2002",
+      "item": "智能门锁",
+      "price": 1299,
+      "request_text": "我不想要订单2002了，帮我取消。",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": true
+    },
+    "required_actions": [
+      "get_order",
+      "cancel_order"
+    ],
+    "forbidden_actions": [],
+    "terminal_predicate": {
+      "order.status": "cancelled"
+    }
+  },
+  {
+    "task_id": "val_pair_022_b",
+    "pair_id": "val_pair_022",
+    "capability": "precondition_checking",
+    "user_request": "我不想要订单2002了，帮我取消。",
+    "initial_state": {
+      "orders": {
+        "2002": {
+          "user_id": "v002",
+          "item": "智能门锁",
+          "price": 1299,
+          "status": "shipped"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "shipped",
+    "controlled_variables": {
+      "user_id": "v002",
+      "order_id": "2002",
+      "item": "智能门锁",
+      "price": 1299,
+      "request_text": "我不想要订单2002了，帮我取消。",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": false
+    },
+    "required_actions": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "cancel_order"
+    ],
+    "terminal_predicate": {
+      "order.status": "shipped"
+    }
+  },
+  {
+    "task_id": "val_pair_023_a",
+    "pair_id": "val_pair_023",
+    "capability": "precondition_checking",
+    "user_request": "请协助处理订单2003的取消申请。",
+    "initial_state": {
+      "orders": {
+        "2003": {
+          "user_id": "v003",
+          "item": "空气净化器",
+          "price": 1599,
+          "status": "processing"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "processing",
+    "controlled_variables": {
+      "user_id": "v003",
+      "order_id": "2003",
+      "item": "空气净化器",
+      "price": 1599,
+      "request_text": "请协助处理订单2003的取消申请。",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": true
+    },
+    "required_actions": [
+      "get_order",
+      "cancel_order"
+    ],
+    "forbidden_actions": [],
+    "terminal_predicate": {
+      "order.status": "cancelled"
+    }
+  },
+  {
+    "task_id": "val_pair_023_b",
+    "pair_id": "val_pair_023",
+    "capability": "precondition_checking",
+    "user_request": "请协助处理订单2003的取消申请。",
+    "initial_state": {
+      "orders": {
+        "2003": {
+          "user_id": "v003",
+          "item": "空气净化器",
+          "price": 1599,
+          "status": "shipped"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "shipped",
+    "controlled_variables": {
+      "user_id": "v003",
+      "order_id": "2003",
+      "item": "空气净化器",
+      "price": 1599,
+      "request_text": "请协助处理订单2003的取消申请。",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": false
+    },
+    "required_actions": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "cancel_order"
+    ],
+    "terminal_predicate": {
+      "order.status": "shipped"
+    }
+  },
+  {
+    "task_id": "val_pair_024_a",
+    "pair_id": "val_pair_024",
+    "capability": "precondition_checking",
+    "user_request": "订单2004可以帮我终止吗？",
+    "initial_state": {
+      "orders": {
+        "2004": {
+          "user_id": "v004",
+          "item": "投影仪",
+          "price": 2699,
+          "status": "processing"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "processing",
+    "controlled_variables": {
+      "user_id": "v004",
+      "order_id": "2004",
+      "item": "投影仪",
+      "price": 2699,
+      "request_text": "订单2004可以帮我终止吗？",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": true
+    },
+    "required_actions": [
+      "get_order",
+      "cancel_order"
+    ],
+    "forbidden_actions": [],
+    "terminal_predicate": {
+      "order.status": "cancelled"
+    }
+  },
+  {
+    "task_id": "val_pair_024_b",
+    "pair_id": "val_pair_024",
+    "capability": "precondition_checking",
+    "user_request": "订单2004可以帮我终止吗？",
+    "initial_state": {
+      "orders": {
+        "2004": {
+          "user_id": "v004",
+          "item": "投影仪",
+          "price": 2699,
+          "status": "shipped"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "shipped",
+    "controlled_variables": {
+      "user_id": "v004",
+      "order_id": "2004",
+      "item": "投影仪",
+      "price": 2699,
+      "request_text": "订单2004可以帮我终止吗？",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": false
+    },
+    "required_actions": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "cancel_order"
+    ],
+    "terminal_predicate": {
+      "order.status": "shipped"
+    }
+  },
+  {
+    "task_id": "val_pair_025_a",
+    "pair_id": "val_pair_025",
+    "capability": "precondition_checking",
+    "user_request": "麻烦确认一下订单2005是否能取消。",
+    "initial_state": {
+      "orders": {
+        "2005": {
+          "user_id": "v005",
+          "item": "咖啡机",
+          "price": 899,
+          "status": "processing"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "processing",
+    "controlled_variables": {
+      "user_id": "v005",
+      "order_id": "2005",
+      "item": "咖啡机",
+      "price": 899,
+      "request_text": "麻烦确认一下订单2005是否能取消。",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": true
+    },
+    "required_actions": [
+      "get_order",
+      "cancel_order"
+    ],
+    "forbidden_actions": [],
+    "terminal_predicate": {
+      "order.status": "cancelled"
+    }
+  },
+  {
+    "task_id": "val_pair_025_b",
+    "pair_id": "val_pair_025",
+    "capability": "precondition_checking",
+    "user_request": "麻烦确认一下订单2005是否能取消。",
+    "initial_state": {
+      "orders": {
+        "2005": {
+          "user_id": "v005",
+          "item": "咖啡机",
+          "price": 899,
+          "status": "shipped"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "shipped",
+    "controlled_variables": {
+      "user_id": "v005",
+      "order_id": "2005",
+      "item": "咖啡机",
+      "price": 899,
+      "request_text": "麻烦确认一下订单2005是否能取消。",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": false
+    },
+    "required_actions": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "cancel_order"
+    ],
+    "terminal_predicate": {
+      "order.status": "shipped"
+    }
+  },
+  {
+    "task_id": "val_pair_026_a",
+    "pair_id": "val_pair_026",
+    "capability": "precondition_checking",
+    "user_request": "请替我撤销一下2006号订单。",
+    "initial_state": {
+      "orders": {
+        "2006": {
+          "user_id": "v006",
+          "item": "运动手环",
+          "price": 199,
+          "status": "processing"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "processing",
+    "controlled_variables": {
+      "user_id": "v006",
+      "order_id": "2006",
+      "item": "运动手环",
+      "price": 199,
+      "request_text": "请替我撤销一下2006号订单。",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": true
+    },
+    "required_actions": [
+      "get_order",
+      "cancel_order"
+    ],
+    "forbidden_actions": [],
+    "terminal_predicate": {
+      "order.status": "cancelled"
+    }
+  },
+  {
+    "task_id": "val_pair_026_b",
+    "pair_id": "val_pair_026",
+    "capability": "precondition_checking",
+    "user_request": "请替我撤销一下2006号订单。",
+    "initial_state": {
+      "orders": {
+        "2006": {
+          "user_id": "v006",
+          "item": "运动手环",
+          "price": 199,
+          "status": "shipped"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "shipped",
+    "controlled_variables": {
+      "user_id": "v006",
+      "order_id": "2006",
+      "item": "运动手环",
+      "price": 199,
+      "request_text": "请替我撤销一下2006号订单。",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": false
+    },
+    "required_actions": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "cancel_order"
+    ],
+    "terminal_predicate": {
+      "order.status": "shipped"
+    }
+  },
+  {
+    "task_id": "val_pair_027_a",
+    "pair_id": "val_pair_027",
+    "capability": "precondition_checking",
+    "user_request": "我想取消购买的订单2007。",
+    "initial_state": {
+      "orders": {
+        "2007": {
+          "user_id": "v007",
+          "item": "路由器",
+          "price": 399,
+          "status": "processing"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "processing",
+    "controlled_variables": {
+      "user_id": "v007",
+      "order_id": "2007",
+      "item": "路由器",
+      "price": 399,
+      "request_text": "我想取消购买的订单2007。",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": true
+    },
+    "required_actions": [
+      "get_order",
+      "cancel_order"
+    ],
+    "forbidden_actions": [],
+    "terminal_predicate": {
+      "order.status": "cancelled"
+    }
+  },
+  {
+    "task_id": "val_pair_027_b",
+    "pair_id": "val_pair_027",
+    "capability": "precondition_checking",
+    "user_request": "我想取消购买的订单2007。",
+    "initial_state": {
+      "orders": {
+        "2007": {
+          "user_id": "v007",
+          "item": "路由器",
+          "price": 399,
+          "status": "shipped"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "shipped",
+    "controlled_variables": {
+      "user_id": "v007",
+      "order_id": "2007",
+      "item": "路由器",
+      "price": 399,
+      "request_text": "我想取消购买的订单2007。",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": false
+    },
+    "required_actions": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "cancel_order"
+    ],
+    "terminal_predicate": {
+      "order.status": "shipped"
+    }
+  },
+  {
+    "task_id": "val_pair_028_a",
+    "pair_id": "val_pair_028",
+    "capability": "precondition_checking",
+    "user_request": "能帮我处理订单2008的取消吗？",
+    "initial_state": {
+      "orders": {
+        "2008": {
+          "user_id": "v008",
+          "item": "电饭煲",
+          "price": 499,
+          "status": "processing"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "processing",
+    "controlled_variables": {
+      "user_id": "v008",
+      "order_id": "2008",
+      "item": "电饭煲",
+      "price": 499,
+      "request_text": "能帮我处理订单2008的取消吗？",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": true
+    },
+    "required_actions": [
+      "get_order",
+      "cancel_order"
+    ],
+    "forbidden_actions": [],
+    "terminal_predicate": {
+      "order.status": "cancelled"
+    }
+  },
+  {
+    "task_id": "val_pair_028_b",
+    "pair_id": "val_pair_028",
+    "capability": "precondition_checking",
+    "user_request": "能帮我处理订单2008的取消吗？",
+    "initial_state": {
+      "orders": {
+        "2008": {
+          "user_id": "v008",
+          "item": "电饭煲",
+          "price": 499,
+          "status": "shipped"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "shipped",
+    "controlled_variables": {
+      "user_id": "v008",
+      "order_id": "2008",
+      "item": "电饭煲",
+      "price": 499,
+      "request_text": "能帮我处理订单2008的取消吗？",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": false
+    },
+    "required_actions": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "cancel_order"
+    ],
+    "terminal_predicate": {
+      "order.status": "shipped"
+    }
+  },
+  {
+    "task_id": "val_pair_029_a",
+    "pair_id": "val_pair_029",
+    "capability": "precondition_checking",
+    "user_request": "请问2009号订单还能取消不？",
+    "initial_state": {
+      "orders": {
+        "2009": {
+          "user_id": "v009",
+          "item": "游戏耳机",
+          "price": 799,
+          "status": "processing"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "processing",
+    "controlled_variables": {
+      "user_id": "v009",
+      "order_id": "2009",
+      "item": "游戏耳机",
+      "price": 799,
+      "request_text": "请问2009号订单还能取消不？",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": true
+    },
+    "required_actions": [
+      "get_order",
+      "cancel_order"
+    ],
+    "forbidden_actions": [],
+    "terminal_predicate": {
+      "order.status": "cancelled"
+    }
+  },
+  {
+    "task_id": "val_pair_029_b",
+    "pair_id": "val_pair_029",
+    "capability": "precondition_checking",
+    "user_request": "请问2009号订单还能取消不？",
+    "initial_state": {
+      "orders": {
+        "2009": {
+          "user_id": "v009",
+          "item": "游戏耳机",
+          "price": 799,
+          "status": "shipped"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "shipped",
+    "controlled_variables": {
+      "user_id": "v009",
+      "order_id": "2009",
+      "item": "游戏耳机",
+      "price": 799,
+      "request_text": "请问2009号订单还能取消不？",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": false
+    },
+    "required_actions": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "cancel_order"
+    ],
+    "terminal_predicate": {
+      "order.status": "shipped"
+    }
+  },
+  {
+    "task_id": "val_pair_030_a",
+    "pair_id": "val_pair_030",
+    "capability": "precondition_checking",
+    "user_request": "帮我把订单2010撤掉。",
+    "initial_state": {
+      "orders": {
+        "2010": {
+          "user_id": "v010",
+          "item": "扫地机配件",
+          "price": 599,
+          "status": "processing"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "processing",
+    "controlled_variables": {
+      "user_id": "v010",
+      "order_id": "2010",
+      "item": "扫地机配件",
+      "price": 599,
+      "request_text": "帮我把订单2010撤掉。",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": true
+    },
+    "required_actions": [
+      "get_order",
+      "cancel_order"
+    ],
+    "forbidden_actions": [],
+    "terminal_predicate": {
+      "order.status": "cancelled"
+    }
+  },
+  {
+    "task_id": "val_pair_030_b",
+    "pair_id": "val_pair_030",
+    "capability": "precondition_checking",
+    "user_request": "帮我把订单2010撤掉。",
+    "initial_state": {
+      "orders": {
+        "2010": {
+          "user_id": "v010",
+          "item": "扫地机配件",
+          "price": 599,
+          "status": "shipped"
+        }
+      }
+    },
+    "intervention_variable": "order.status",
+    "intervention_value": "shipped",
+    "controlled_variables": {
+      "user_id": "v010",
+      "order_id": "2010",
+      "item": "扫地机配件",
+      "price": 599,
+      "request_text": "帮我把订单2010撤掉。",
+      "tool_set": [
+        "get_order",
+        "cancel_order"
+      ],
+      "task_goal": "cancel_order_if_allowed",
+      "language_style": "concise_zh"
+    },
+    "expected_behavior": {
+      "should_cancel": false
+    },
+    "required_actions": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "cancel_order"
+    ],
+    "terminal_predicate": {
+      "order.status": "shipped"
+    }
+  }
+]

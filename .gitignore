@@ -1,0 +1,39 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local credentials and private machine settings (never commit these).
+/config.py
+config.local.py
+*.local.py
+.env
+.env.*
+!.env.example
+!.env.template
+secrets/
+.secrets/
+credentials/
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+.vscode/
+.idea/
+
+# Generated experiment records, model adapters and weights.
+/outputs/
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.log
+
+# Other local environments and platform files; env/ contains project source.
+venv/
+.venv*/
+.DS_Store
+Thumbs.db
